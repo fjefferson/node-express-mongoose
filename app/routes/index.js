@@ -1,5 +1,3 @@
-module.exports = function(app) {
-app.get('/', function(req, res) {
-	res.render('index');
-});
-};
+var ct = require('../controllers/index')()
+
+module.exports = function(app) {app.get('/', ct.index)}

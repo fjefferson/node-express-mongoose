@@ -13,6 +13,7 @@
     "ejs": "*",
     "express": "*",
     "express-load": "^1.1.14",
-    "method-override": "^2.3.1"
+    "method-override": "^2.3.1",
+    "mongoose": "^3.8.25"
   }
 }
