@@ -1,9 +1,17 @@
-module.exports = function() {
+module.exports = function (app) {
+
 var controller = {};
 controller.inclusao = function(req, res) {
-var query = require('url').parse(req.url,true).query;
-
-res.render('processamentoInclusao', {nome: req.query.nome});
+	var Paciente = app.models.paciente
+	Paciente.create({nome: req.query.nome, email: req.query.email}).then(
+		function(p){
+			res.render('processamentoInclusao', {id: p._id,nome: req.query.nome, email: req.query.email});
+		},
+		function(erro){
+			res.send('erro: '+erro)
+		}
+	)
+	
 };
 return controller;
 }
