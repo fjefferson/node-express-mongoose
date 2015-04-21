@@ -1,3 +1,5 @@
-var ct = require('../controllers/index')()
 
-module.exports = function(app) {app.get('/', ct.index)}
+
+module.exports = function(app) {
+	app.get('/', app.controllers.index.index)
+	}

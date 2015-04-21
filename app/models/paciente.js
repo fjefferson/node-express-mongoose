@@ -12,5 +12,5 @@ module.exports = function() {
 			index: {unique: true}
 		}
 	});
-	return mongoose.model('Paceinte', schema);
+	return mongoose.model('Paciente', schema);
 };
